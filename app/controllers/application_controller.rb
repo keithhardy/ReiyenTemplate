@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user
+    helper_method :current_user, :capitalize_array
 
     private
   
@@ -24,6 +24,14 @@ class ApplicationController < ActionController::Base
       else
         redirect_to users_path, alert: "You are not authorized to access this page."
         return false
+      end
+    end
+
+    def capitalize_array(array)
+      locations = array
+
+      result = locations.map do |location|
+        [location.capitalize, location]
       end
     end
 end

@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :role, style: "display: block" %>
-    <%= form.select :role, User.roles.keys %>
+    <%= form.select :role, capitalize_array(User.roles.keys) %>
   </div>
 
   <div>
