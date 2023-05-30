@@ -70,3 +70,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'activerecord-session_store', '~> 2.0.0'
